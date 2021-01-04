@@ -12,24 +12,31 @@
     />
   </head>
   <body>
+    <!-- HEADER -->
     <div class="topnav" id="myTopnav">
+
+      <!-- LOGO -->
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+        <img alt="logo" src="Logo.png" width="auto" height="auto" />
+      </div>
+
+      <!-- NAVBAR -->
+      <div class="main-navbar">
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </div>
-    <div class="main-navbar">
-      
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    </div>
-  </div>
+    
+    <!-- FOOTER -->
     <main>
+
+      <!-- HERO -->
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
@@ -52,6 +59,8 @@
         </button>
       </div>
 
+
+      <!-- MODAL -->
       <div class="bground">
         <div class="content">
           <span class="close"></span>
@@ -62,6 +71,7 @@
               method="get"
               onsubmit="return validate();"
             >
+              <!-- PRENOM -->
               <div
                 class="formData">
                 <label>Prénom</label><br>
@@ -73,6 +83,8 @@
                   minlength="2"
                 /><br>
               </div>
+
+              <!-- NOM -->
               <div
                 class="formData">
                 <label>Nom</label><br>
@@ -83,6 +95,8 @@
                   name="last"
                 /><br>
               </div>
+
+              <!-- EMAIL -->
               <div
                 class="formData">
                 <label>E-mail</label><br>
@@ -93,6 +107,8 @@
                   name="email"
                 /><br>
               </div>
+
+              <!-- birthdate -->
               <div
                 class="formData">
                 <label>Date de naissance</label><br>
@@ -103,11 +119,15 @@
                   name="birthdate"
                 /><br>
               </div>
+
+              <!-- QUANTITY -->
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
+
+              <!-- LOCATION -->
               <p class="text-label">Quelles villes ?</p>
               <div
                 class="formData">
@@ -179,6 +199,7 @@
                 >
               </div>
 
+              <!-- CHECKBOX -->
               <div
                 class="formData">
                 <input
@@ -199,6 +220,8 @@
                 </label>
                 <br>
               </div>
+
+              <!-- SUBMIT -->
               <input
                 class="btn-submit"
                 type="submit"
@@ -210,11 +233,14 @@
         </div>
       </div>
     </main>
+
+    <!-- FOOTER -->
     <footer>
       <p class="copyrights">
         Copyright 2014 - 2020, GameOn Inc.
       </p>
     </footer>
+
     <script src="modal.js"></script>
   </body>
 </html>
