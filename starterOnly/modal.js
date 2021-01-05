@@ -24,6 +24,9 @@ const modalBtn = document.querySelectorAll(".modal-btn"); //event open modal
 const closingCross = document.querySelector(".close"); //event close modal
 const formData = document.querySelectorAll(".formData"); //data-attribute
 const validationForm = document.querySelector(".validationForm"); //event submit 
+const pCitiesAndThanks = document.querySelector(".text-label");
+const submitButton = document.querySelector(".btn-submit");
+const closingButton = document.querySelector(".btn-closing"); //closing button appearing after submitting complete
 
 // variables
 var formIsValid = false;
@@ -36,6 +39,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // close modal event : on close cross click
 closingCross.addEventListener("click", closeModal);
+closingButton.addEventListener("click", closeModal);
 
 // Listen the submission of the <form> .validationForm
 validationForm.addEventListener('submit', function(e){ 
@@ -43,13 +47,23 @@ validationForm.addEventListener('submit', function(e){
   e.preventDefault(); 
       
       // the function validate() is testing each input, if everything is ok, it return true
-      if(validate()){
-        console.log("Form : validé");
+      if(!validate()){
+        // disparition formulaire
+        for (let index = 0; index < formData.length; index++) {
+          formData[index].style.display = "none";
+        }
+        // transformation of <p> .text-label used for the text "Quelles villes?" to display the thanks message
+        pCitiesAndThanks.textContent = "Thank you for submitting your registration details";
+        pCitiesAndThanks.classList.replace("text-label", "thank-message");
+
+        // making submit button a closing button
+        submitButton.style.display = "none";
+        closingButton.style.display = "block";
+
+        //TODO submit without redirect? 
+
         // validationForm.submit();
       }   
-      else{
-        console.log("Form : NONvalidé");
-      }
   }
 );
 
@@ -101,6 +115,7 @@ function radioButtonTest(NumberOfRadioButton){
   return isChecked;
 }
 
+// validation des champs du formulaire
 function validate () {
   // formIsValid is set on true first, if while going through the function everything is OK, it will stay true and validate the submit,
   // but if at least 1 test is NOK, formIsValid become false and there is not submit

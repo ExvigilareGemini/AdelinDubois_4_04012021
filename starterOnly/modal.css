@@ -184,8 +184,13 @@ main {
 }
 
 .modal-body {
+  position: relative;
   padding: 15px 8%;
   margin: 15px auto;
+}
+
+.thanksMessage {
+  position: absolute;
 }
 
 label {
@@ -303,6 +308,7 @@ input[data-error]::after {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  z-index: 100;
 }
 .close:before,
 .close:after {
@@ -320,7 +326,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup, 
+.btn-closing {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -401,6 +408,11 @@ input[data-error]::after {
 .text-label {
   font-weight: normal;
   font-size: 16px;
+}
+.thank-message {
+  font-size: 30px;
+  margin: 300px 70px;
+  font-weight: 100;
 }
 .hero-section {
   min-height: 93vh;
