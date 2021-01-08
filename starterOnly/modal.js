@@ -47,7 +47,7 @@ validationForm.addEventListener('submit', function(e){
   e.preventDefault(); 
       
       // the function validate() is testing each input, if everything is ok, it return true
-      if(!validate()){
+      if(validate()){
         // disparition formulaire
         for (let index = 0; index < formData.length; index++) {
           formData[index].style.display = "none";
@@ -157,7 +157,7 @@ function validate () {
 
   // quantity validation | not null | number of formdata = 4
   if (document.querySelector("#"+inputId[4]).value == "") {
-    errorAlert(4, "Veuillez entrer vos nombre de participations");
+    errorAlert(4, "Veuillez entrer un nombre de participation");
   }  
   else {
     noMoreAlert(4);
