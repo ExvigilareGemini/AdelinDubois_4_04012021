@@ -1,6 +1,4 @@
-https://exvigilaregemini.github.io/AdelinDubois_4_04012021/
-
-https://exvigilaregemini.github.io/AdelinDubois_4_04012021/starterOnly/
+[GameOn] (https://exvigilaregemini.github.io/AdelinDubois_4_04012021/starterOnly/)
 
 # Projet GameOn
 1. Forkez ce repo ;
