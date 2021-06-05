@@ -1,7 +1,15 @@
-https://exvigilaregemini.github.io/AdelinDubois_4_04012021/starterOnly/
+# Third project of the OpenclassRooms Course
 
-# Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+[Site here](https://exvigilaregemini.github.io/AdelinDubois_4_04012021/starterOnly/)
+
+A landing page with a registration form, purpose here is to make the form validation system with vanilla javascript.
+
+# Technologies
+ - HTML
+ - CSS
+ - Javascript
+
+# Skills learned
+ -  Analysing DOM informations
+ -  Logical testing on those informations
+ -  Display information on DOM according to test result
