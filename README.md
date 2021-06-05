@@ -1,4 +1,4 @@
-# Third project of the OpenclassRooms Course
+# Third project of the OpenclassRooms Front-End Course
 
 [Site here](https://exvigilaregemini.github.io/AdelinDubois_4_04012021/starterOnly/)
 
